@@ -21,7 +21,9 @@ public class ExerciceServiceImpl implements ExerciceService {
     private MachineDeSportDao machineDeSportDao = new MachinedeSportDaoIml();
     private ExerciceDao exerciceDao = new ExerciceDaoImpl();
     @Override
-    public Exercice addExercice(Date date, Time timeStart, Time timeEnd, MachineDeSport machineDeSport) {
+    public Exercice addExercice(
+            Date date, Time timeStart, Time timeEnd, MachineDeSport machineDeSport
+    ) {
         Exercice newExercice = new Exercice(
                 date, timeStart, timeEnd,machineDeSport
         );

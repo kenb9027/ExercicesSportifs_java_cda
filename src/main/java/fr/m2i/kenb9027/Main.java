@@ -9,6 +9,9 @@ import fr.m2i.kenb9027.service.impl.CentreSportifServiceImpl;
 import fr.m2i.kenb9027.service.impl.ExerciceServiceImpl;
 import fr.m2i.kenb9027.service.impl.MachineDeSportServiceImpl;
 
+import java.sql.Date;
+import java.text.DateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -116,7 +119,7 @@ public class Main {
     }
 
     /**
-     * Display Machines for 1 Centre Sportif
+     * Display Machines for 1 Centre Sportif ( #2 )
      */
     public  static  void displayMachinesForOneCentreSportif(ArrayList<CentreSportif> centreSportifList){
 
@@ -136,6 +139,36 @@ public class Main {
                 machines ) {
             System.out.println(machine);
         }
+
+    }
+
+    public static void addExercice(ArrayList<CentreSportif> centreSportifList)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ajouter un exercice :");
+        //choix du centre
+        System.out.println("Choisissez un Centre Sportif :");
+        for (CentreSportif centre :
+                centreSportifList ) {
+            System.out.println(centre.getId() + " - " + centre);
+        }
+        System.out.print("Numéro:");
+        Long idCentre = scanner.nextLong();
+        //choix de la machine
+        ArrayList<MachineDeSport> machines = machineDeSportService.getAllMachineDeSportForOneCentreSportif(idCentre);
+        System.out.println("Choisissez une machine :");
+        for (MachineDeSport machine :
+                machines ) {
+            System.out.println(machine.getId() + " - " + machine);
+        }
+        System.out.print("Numéro:");
+        Long idMachine = scanner.nextLong();
+
+        //choix de la date format jj/mm/aaaa
+
+
+
 
     }
 }

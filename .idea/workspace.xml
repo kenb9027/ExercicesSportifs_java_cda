@@ -7,11 +7,8 @@
     <list default="true" id="b73b800b-8680-423d-826c-a7861b597285" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/business/CentreSportif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/business/CentreSportif.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/business/Exercice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/business/Exercice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/business/MachineDeSport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/business/MachineDeSport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/Queries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/impl/MachinedeSportDaoIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/impl/MachinedeSportDaoIml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/impl/ExerciceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/impl/ExerciceServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666701933865</updated>
-      <workItem from="1666701937323" duration="8901000" />
+      <workItem from="1666701937323" duration="9438000" />
     </task>
     <servers />
   </component>
