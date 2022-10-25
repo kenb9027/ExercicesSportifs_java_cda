@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b73b800b-8680-423d-826c-a7861b597285" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/ExerciceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/ExerciceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/impl/CentreSportifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/impl/CentreSportifServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/impl/ExerciceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/impl/ExerciceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/impl/MachineDeSportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/impl/MachineDeSportServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="fr.m2i.kenb9027.dao.impl" />
@@ -50,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666701933865</updated>
-      <workItem from="1666701937323" duration="5308000" />
+      <workItem from="1666701937323" duration="6582000" />
     </task>
     <servers />
   </component>

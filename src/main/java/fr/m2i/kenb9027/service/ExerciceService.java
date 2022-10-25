@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public interface ExerciceService {
 
-    Exercice addExercice(Date date , Time timeStart , Time dateEnd, MachineDeSport machineDeSport);
+    Exercice addExercice(Date date , Time timeStart , Time timeEnd, MachineDeSport machineDeSport);
 
     Exercice getOneExercice(Long id);
 
