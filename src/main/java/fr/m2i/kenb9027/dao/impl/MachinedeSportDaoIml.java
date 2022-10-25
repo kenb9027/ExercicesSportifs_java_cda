@@ -53,7 +53,7 @@ public class MachinedeSportDaoIml implements MachineDeSportDao {
             MachineDeSport machineDeSport = new MachineDeSport();
             machineDeSport.setId(resultSet.getLong("id"));
             machineDeSport.setName(resultSet.getString("name"));
-            machineDeSport.setCentreSportif(centreSportifDao.findOneById(resultSet.getLong("centreSportif")));
+            machineDeSport.setCentreSportif(centreSportifDao.findOneById(resultSet.getLong("centreSportifId")));
             return machineDeSport;
         }
         return null;
@@ -70,7 +70,7 @@ public class MachinedeSportDaoIml implements MachineDeSportDao {
             MachineDeSport machineDeSport = new MachineDeSport();
             machineDeSport.setId(resultSet.getLong("id"));
             machineDeSport.setName(resultSet.getString("name"));
-            machineDeSport.setCentreSportif(centreSportifDao.findOneById(resultSet.getLong("centreSportif")));
+            machineDeSport.setCentreSportif(centreSportifDao.findOneById(resultSet.getLong("centreSportifId")));
             machines.add(machineDeSport);
         }
         return machines;
@@ -90,7 +90,7 @@ public class MachinedeSportDaoIml implements MachineDeSportDao {
             MachineDeSport machineDeSport = new MachineDeSport();
             machineDeSport.setId(resultSet.getLong("id"));
             machineDeSport.setName(resultSet.getString("name"));
-            machineDeSport.setCentreSportif(centreSportifDao.findOneById(resultSet.getLong("centreSportif")));
+            machineDeSport.setCentreSportif(centreSportifDao.findOneById(resultSet.getLong("centreSportifId")));
             machines.add(machineDeSport);
         }
         return machines;

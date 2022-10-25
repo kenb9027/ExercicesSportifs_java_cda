@@ -9,10 +9,10 @@ public class Queries {
 
 
     //MACHINES
-    public static final String MACHINE_CREATE = "INSERT INTO machineDeSport (name, centreSportif) VALUES (?, ?)";
+    public static final String MACHINE_CREATE = "INSERT INTO machineDeSport (name, centreSportifId) VALUES (?, ?)";
     public static final String MACHINE_FIND_ONE_BY_ID = "SELECT * FROM machineDeSport WHERE id= ?";
     public static final String MACHINE_FIND_ALL = "SELECT * FROM machineDeSport";
-    public static final String MACHINE_FIND_ALL_BY_CENTRE_ID = "SELECT * FROM machineDeSport WHERE centreSportif= ?";
+    public static final String MACHINE_FIND_ALL_BY_CENTRE_ID = "SELECT * FROM machineDeSport WHERE centreSportifId= ?";
 
 
     //EXERCICES

@@ -23,6 +23,16 @@ public class Exercice {
 
     }
 
+    @Override
+    public String toString() {
+        return "Exercice{" +
+                "date=" + date +
+                ", timeStart=" + timeStart +
+                ", timeEnd=" + timeEnd +
+                ", machineDeSport=" + machineDeSport +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

@@ -17,6 +17,12 @@ public class MachineDeSport {
 
     }
 
+    @Override
+    public String toString() {
+        return "MachineDeSport " +
+                "nom='" + name ;
+    }
+
     public Long getId() {
         return id;
     }

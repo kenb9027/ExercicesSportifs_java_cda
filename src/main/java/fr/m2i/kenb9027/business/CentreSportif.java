@@ -20,6 +20,11 @@ public class CentreSportif {
         this.city = city;
     }
 
+    @Override
+    public String toString() {
+        return "Centre Sportif " + name + ", à " + city ;
+    }
+
     public Long getId() {
         return id;
     }
