@@ -77,7 +77,7 @@ public class Main {
                     System.out.println();
                     break;
                 case 5:
-                    System.out.println("Trier les exercices par date");
+                    sortExercicesByDate();
                     System.out.println();
                     break;
                 case 6:
@@ -166,6 +166,10 @@ public class Main {
 
     }
 
+    /**
+     *  Add an exercice
+     * @param centreSportifList
+     */
     public static void addExercice(ArrayList<CentreSportif> centreSportifList) throws ParseException {
         Scanner scanner = new Scanner(System.in);
 
@@ -249,6 +253,11 @@ public class Main {
 //        System.out.println(addedExe);
     }
 
+    /**
+     * Ask for a date
+     * @return
+     * @throws ParseException
+     */
     public static Date askForDate() throws ParseException {
         Scanner dateScanner = new Scanner(System.in);
         java.util.Date day = new java.util.Date();
@@ -278,6 +287,11 @@ public class Main {
         return date;
     }
 
+    /**
+     * Ask for a time
+     * @param string "début" ou "fin"
+     * @return
+     */
     public static Time askFortime(String string)
     {
         Scanner timeScanner = new Scanner(System.in);
@@ -311,6 +325,15 @@ public class Main {
         }
 
         return time;
+    }
+
+    public static void sortExercicesByDate(){
+        ArrayList<Exercice> exercicesList = exerciceService.sortAllExerciceByDate();
+        System.out.println("Liste des exercices triés par Date (du plus récent au plus ancien) :");
+        for (Exercice exercice :
+                exercicesList) {
+            System.out.println(exercice);
+        };
     }
 
 }

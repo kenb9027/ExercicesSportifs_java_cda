@@ -1,5 +1,6 @@
 package fr.m2i.kenb9027.business;
 
+
 import java.sql.Time;
 import java.sql.Date;
 
@@ -31,6 +32,7 @@ public class Exercice {
                 ", timeStart=" + timeStart +
                 ", timeEnd=" + timeEnd +
                 ", machineDeSport=" + machineDeSport +
+                ", centre=" + machineDeSport.getCentreSportif() +
                 '}';
     }
 

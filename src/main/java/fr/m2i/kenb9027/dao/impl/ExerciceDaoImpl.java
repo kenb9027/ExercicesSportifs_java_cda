@@ -105,7 +105,7 @@ public class ExerciceDaoImpl implements ExerciceDao {
             exercice.setDate(resultSet.getDate("date"));
             exercice.setTimeStart(resultSet.getTime("timeStart"));
             exercice.setTimeEnd(resultSet.getTime("timeEnd"));
-            exercice.setMachineDeSport(machineDeSportDao.findOneById(resultSet.getLong("machineDeSport")));
+            exercice.setMachineDeSport(machineDeSportDao.findOneById(resultSet.getLong("machine")));
             exercices.add(exercice);
         }
         return exercices;
