@@ -1,7 +1,7 @@
 package fr.m2i.kenb9027.business;
 
 import java.sql.Time;
-import java.util.Date;
+import java.sql.Date;
 
 public class Exercice {
 
@@ -26,6 +26,7 @@ public class Exercice {
     @Override
     public String toString() {
         return "Exercice{" +
+                "id=" + id +
                 "date=" + date +
                 ", timeStart=" + timeStart +
                 ", timeEnd=" + timeEnd +

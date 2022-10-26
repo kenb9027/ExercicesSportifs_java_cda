@@ -7,7 +7,11 @@
     <list default="true" id="b73b800b-8680-423d-826c-a7861b597285" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/business/MachineDeSport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/business/MachineDeSport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/business/Exercice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/business/Exercice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/Queries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/impl/CentreSportifDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/impl/CentreSportifDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/impl/ExerciceDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/impl/ExerciceDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/impl/MachinedeSportDaoIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/dao/impl/MachinedeSportDaoIml.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/impl/ExerciceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/m2i/kenb9027/service/impl/ExerciceServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +33,14 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Gf8FvVDmM0UCqAQqpiwVYmH5Op" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -36,15 +48,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="fr.m2i.kenb9027.dao.impl" />
@@ -58,7 +70,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666701933865</updated>
-      <workItem from="1666701937323" duration="9438000" />
+      <workItem from="1666701937323" duration="9479000" />
+      <workItem from="1666768246654" duration="258000" />
+      <workItem from="1666768596823" duration="10930000" />
     </task>
     <servers />
   </component>

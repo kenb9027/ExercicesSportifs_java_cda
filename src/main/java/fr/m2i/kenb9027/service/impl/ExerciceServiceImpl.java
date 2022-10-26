@@ -25,12 +25,11 @@ public class ExerciceServiceImpl implements ExerciceService {
             Date date, Time timeStart, Time timeEnd, MachineDeSport machineDeSport
     ) {
         Exercice newExercice = new Exercice(
-                date, timeStart, timeEnd,machineDeSport
+                date, timeStart, timeEnd, machineDeSport
         );
         try {
             return exerciceDao.create(newExercice);
         } catch (SQLException e){
-
             e.printStackTrace();
         }
         return newExercice;

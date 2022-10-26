@@ -31,6 +31,7 @@ public class MachinedeSportDaoIml implements MachineDeSportDao {
         );
         preparedStatement.setString(1, machineDeSport.getName());
         preparedStatement.setLong(2, machineDeSport.getCentreSportif().getId());
+        preparedStatement.executeUpdate();
 
         ResultSet resultSet = preparedStatement.getGeneratedKeys();
         if (resultSet.next())

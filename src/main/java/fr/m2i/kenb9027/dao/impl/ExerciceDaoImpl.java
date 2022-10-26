@@ -12,7 +12,7 @@ public class ExerciceDaoImpl implements ExerciceDao {
     private CentreSportifDao centreSportifDao = new CentreSportifDaoImpl();
     private MachineDeSportDao machineDeSportDao = new MachinedeSportDaoIml();
 
-    public void MachinedeSportDaoIml(){
+    public ExerciceDaoImpl(){
         try {
             connection = ConnectionBDD.getConnection();
         }catch (SQLException | ClassNotFoundException e){
@@ -26,12 +26,14 @@ public class ExerciceDaoImpl implements ExerciceDao {
                 Queries.EXERCICE_CREATE,
                 Statement.RETURN_GENERATED_KEYS
         );
-        preparedStatement.setDate(1, (Date) exercice.getDate());
-        preparedStatement.setTime(2, (Time) exercice.getTimeStart());
-        preparedStatement.setTime(3, (Time) exercice.getTimeEnd());
+        preparedStatement.setDate(1, exercice.getDate());
+        preparedStatement.setTime(2, exercice.getTimeStart());
+        preparedStatement.setTime(3, exercice.getTimeEnd());
         preparedStatement.setLong(4, exercice.getMachineDeSport().getId());
 
+        preparedStatement.executeUpdate();
         ResultSet resultSet = preparedStatement.getGeneratedKeys();
+
         if (resultSet.next())
         {
             exercice.setId(resultSet.getLong(1));

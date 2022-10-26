@@ -16,7 +16,7 @@ public class Queries {
 
 
     //EXERCICES
-    public static final String EXERCICE_CREATE = "INSERT INTO exercice (date, timeStart, timeEnd, machineDeSport) VALUES (?, ?, ?, ?)";
+    public static final String EXERCICE_CREATE = "INSERT INTO exercice (date, timeStart, timeEnd, machine) VALUES (?, ?, ?, ?)";
     public static final String EXERCICE_FIND_ONE_BY_ID = "SELECT * FROM exercice WHERE id= ?";
     public static final String EXERCICE_FIND_ALL = "SELECT * FROM exercice";
     public static final String EXERCICE_UPDATE = "";

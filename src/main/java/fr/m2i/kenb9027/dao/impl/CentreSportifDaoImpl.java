@@ -28,6 +28,7 @@ public class CentreSportifDaoImpl implements CentreSportifDao {
         );
         preparedStatement.setString(1, centreSportif.getName());
         preparedStatement.setString(2, centreSportif.getCity());
+        preparedStatement.executeUpdate();
 
         ResultSet resultSet = preparedStatement.getGeneratedKeys();
         if (resultSet.next())
