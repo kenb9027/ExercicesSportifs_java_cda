@@ -68,4 +68,16 @@ public class ExerciceServiceImpl implements ExerciceService {
         }
         return null;
     }
+
+    @Override
+    public boolean deleteExercice(Long id) {
+
+        try {
+            return exerciceDao.deleteOneById(id);
+        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

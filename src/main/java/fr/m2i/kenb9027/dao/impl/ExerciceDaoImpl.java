@@ -56,7 +56,7 @@ public class ExerciceDaoImpl implements ExerciceDao {
             exercice.setDate(resultSet.getDate("date"));
             exercice.setTimeStart(resultSet.getTime("timeStart"));
             exercice.setTimeEnd(resultSet.getTime("timeEnd"));
-            exercice.setMachineDeSport(machineDeSportDao.findOneById(resultSet.getLong("machineDeSport")));
+            exercice.setMachineDeSport(machineDeSportDao.findOneById(resultSet.getLong("machine")));
 
             return exercice;
         }
@@ -76,7 +76,7 @@ public class ExerciceDaoImpl implements ExerciceDao {
             exercice.setDate(resultSet.getDate("date"));
             exercice.setTimeStart(resultSet.getTime("timeStart"));
             exercice.setTimeEnd(resultSet.getTime("timeEnd"));
-            exercice.setMachineDeSport(machineDeSportDao.findOneById(resultSet.getLong("machineDeSport")));
+            exercice.setMachineDeSport(machineDeSportDao.findOneById(resultSet.getLong("machine")));
             exercices.add(exercice);
         }
         return exercices;
@@ -88,7 +88,11 @@ public class ExerciceDaoImpl implements ExerciceDao {
     }
 
     @Override
-    public void deleteOneById(Long id) throws SQLException {
+    public boolean deleteOneById(Long id) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement(
+                Queries.EXERCICE_DELETE_ONE_BY_ID);
+        preparedStatement.setLong(1, id);
+        return preparedStatement.execute();
 
     }
 

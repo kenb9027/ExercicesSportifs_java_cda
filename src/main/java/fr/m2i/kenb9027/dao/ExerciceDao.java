@@ -11,6 +11,6 @@ public interface ExerciceDao {
     Exercice findOneById(Long id) throws SQLException;
     ArrayList<Exercice> findAll() throws SQLException;
     Exercice update(Exercice exercice) throws SQLException;
-    void deleteOneById(Long id) throws SQLException;
+    boolean deleteOneById(Long id) throws SQLException;
     ArrayList<Exercice> sortByDate() throws SQLException;
 }

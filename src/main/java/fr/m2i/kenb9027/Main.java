@@ -81,7 +81,7 @@ public class Main {
                     System.out.println();
                     break;
                 case 6:
-                    System.out.println("Supprimer un exercice (sans supprimer la machine !)");
+                    deleteExercice();
                     System.out.println();
                     break;
                 case 7:
@@ -336,4 +336,40 @@ public class Main {
         };
     }
 
+    public static void deleteExercice()
+    {
+        Scanner delScanner = new Scanner(System.in);
+        ArrayList<Exercice> exercicesList = exerciceService.getAllExercice();
+        System.out.println("Supprimer un exercice");
+        Long idExercice = 0L;
+        ArrayList<Long> idList = new ArrayList<>();
+        for (Exercice exercice :
+                exercicesList ) {
+            idList.add(exercice.getId());
+        }
+        boolean exeBool = idList.contains(idExercice);
+        while (!exeBool){
+            System.out.println("Choisissez un exercice à supprimer :");
+            for (Exercice exercice :
+                    exercicesList ) {
+                System.out.println(exercice.getId() + " - " + exercice);
+            }
+            System.out.print("Numéro:");
+            idExercice = delScanner.nextLong();
+            exeBool = idList.contains(idExercice);
+            if (!exeBool){
+                System.out.println("Numéro inexistant.");
+            }
+        }
+
+        boolean bool = exerciceService.deleteExercice(idExercice);
+        if (!bool){
+            System.out.print("Exercice #"+ idExercice +" supprimé !");
+        }
+        else {
+            System.out.print("Erreur : Exercice #"+ idExercice +" non supprimé !");
+        }
+
+
+    }
 }
