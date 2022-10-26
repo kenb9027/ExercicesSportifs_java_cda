@@ -80,4 +80,14 @@ public class ExerciceServiceImpl implements ExerciceService {
         }
         return false;
     }
+
+    @Override
+    public Exercice updateExercice(Exercice exercice) {
+        try {
+            return exerciceDao.update(exercice);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return exercice;
+    }
 }

@@ -73,7 +73,7 @@ public class Main {
                     System.out.println();
                     break;
                 case 4:
-                    System.out.println("Modifier un exercice existant");
+                    updateExercice();
                     System.out.println();
                     break;
                 case 5:
@@ -377,5 +377,94 @@ public class Main {
         }
 
 
+    }
+
+    /**
+     * Update Exercice
+     */
+    public static void updateExercice() throws ParseException {
+    //select exercice
+        Scanner updtScanner = new Scanner(System.in);
+        ArrayList<Exercice> exercicesList = exerciceService.getAllExercice();
+        System.out.println("Modifier un exercice");
+        Long idExercice = 0L;
+        ArrayList<Long> idList = new ArrayList<>();
+        for (Exercice exercice :
+                exercicesList ) {
+            idList.add(exercice.getId());
+        }
+        boolean exeBool = idList.contains(idExercice);
+        while (!exeBool){
+            System.out.println("Choisissez un exercice à modifier :");
+            for (Exercice exercice :
+                    exercicesList ) {
+                System.out.println(exercice.getId() + " - " + exercice);
+            }
+            System.out.print("Numéro:");
+            idExercice = updtScanner.nextLong();
+            exeBool = idList.contains(idExercice);
+            if (!exeBool){
+                System.out.println("Numéro inexistant.");
+            }
+        }
+    //enter new values
+        //choix de la machine
+        Long idMachine = 0L;
+        ArrayList<Long> idMachineList = new ArrayList<>();
+        Long idCentre = exerciceService.getOneExercice(idExercice).getMachineDeSport().getCentreSportif().getId();
+        ArrayList<MachineDeSport> machines = machineDeSportService.getAllMachineDeSportForOneCentreSportif(idCentre);
+        for (MachineDeSport machine :
+                machines ) {
+            idMachineList.add(machine.getId());
+        }
+        boolean machineBool = idMachineList.contains(idMachine);
+        while (!machineBool){
+            System.out.println("Choisissez une machine :");
+            for (MachineDeSport machine :
+                    machines ) {
+                System.out.println(machine.getId() + " - " + machine);
+            }
+            System.out.print("Numéro:");
+            idMachine = updtScanner.nextLong();
+            machineBool = idMachineList.contains(idMachine);
+            if (!machineBool){
+                System.out.println("Numéro inexistant.");
+            }
+        }
+        System.out.println(machineDeSportService.getMachineDeSport(idMachine));
+
+
+        //choix de la date format dd-MM-yyyy
+        Date date = askForDate();
+        System.out.println("Date : " + date);
+
+        // choix de timeStart ( format HH:mm )
+        Time timeStart = askFortime("début");
+        System.out.println("Départ : " + timeStart);
+
+
+        // choix de timeEnd ( format HH:mm )
+        // heure supérieur à l'heure de départ
+        Time timeEnd = timeStart;
+        int compareTime = timeEnd.compareTo(timeStart);
+        boolean comparebool = false;
+        while (!comparebool){
+            timeEnd = askFortime("fin");
+            compareTime = timeEnd.compareTo(timeStart);
+            if (compareTime  > 0){
+                comparebool = true;
+                break;
+            }
+            System.out.println("Horaire de fin d'exercice invalide.");
+        }
+        System.out.println("Arrêt : " + timeEnd);
+
+    //update in BDD
+        Exercice updatedExercice = new Exercice(date, timeStart, timeEnd, machineDeSportService.getMachineDeSport(idMachine));
+        updatedExercice.setId(idExercice);
+        Exercice bddUpdatedExercice = exerciceService.updateExercice(updatedExercice);
+
+        System.out.println("Exercice mis à jour :");
+        System.out.println(bddUpdatedExercice);
     }
 }

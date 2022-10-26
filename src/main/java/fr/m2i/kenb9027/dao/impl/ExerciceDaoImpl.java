@@ -84,7 +84,18 @@ public class ExerciceDaoImpl implements ExerciceDao {
 
     @Override
     public Exercice update(Exercice exercice) throws SQLException {
-        return null;
+        PreparedStatement preparedStatement = connection.prepareStatement(
+                Queries.EXERCICE_UPDATE
+        );
+        preparedStatement.setDate(1, exercice.getDate());
+        preparedStatement.setTime(2, exercice.getTimeStart());
+        preparedStatement.setTime(3, exercice.getTimeEnd());
+        preparedStatement.setLong(4, exercice.getMachineDeSport().getId());
+        preparedStatement.setLong(5, exercice.getId());
+
+        preparedStatement.executeUpdate();
+
+        return exercice;
     }
 
     @Override

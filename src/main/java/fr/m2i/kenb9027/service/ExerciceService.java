@@ -18,4 +18,6 @@ public interface ExerciceService {
     ArrayList<Exercice> sortAllExerciceByDate();
 
     boolean deleteExercice(Long id);
+
+    Exercice updateExercice(Exercice exercice);
 }
