@@ -327,6 +327,9 @@ public class Main {
         return time;
     }
 
+    /**
+     * Sort exercices by date desc.
+     */
     public static void sortExercicesByDate(){
         ArrayList<Exercice> exercicesList = exerciceService.sortAllExerciceByDate();
         System.out.println("Liste des exercices triés par Date (du plus récent au plus ancien) :");
@@ -336,6 +339,9 @@ public class Main {
         };
     }
 
+    /**
+     * Delete an exercice
+     */
     public static void deleteExercice()
     {
         Scanner delScanner = new Scanner(System.in);
